@@ -26,7 +26,7 @@ export class AppComponent {
   }
   
 
-  onChangeIncludeSymbols(){
+  onChangeUseSymbols(){
     this.includeSymbols = !this.includeSymbols;
   }
  
