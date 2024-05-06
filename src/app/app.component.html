@@ -5,7 +5,7 @@
       <h1 class="title has-text-centered">Password Generator</h1>
 
       <div class="field">
-        <label>Length</label>
+        <label>Lunghezza password</label><br>
         <input (input)="onChangeLength($any($event.target).value)" /> <!-- fix error -->
       </div>
 
@@ -13,7 +13,16 @@
         <div class="control">
           <label class="checkbox">
             <input (change)="onChangeUseLetters()" type="checkbox" />
-            Use Letters
+            Usa le lettere minuscole
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input (change)="onChangeUseLettersM()" type="checkbox" />
+            Usa le lettere maiuscole
           </label>
         </div>
       </div>
@@ -22,7 +31,7 @@
         <div class="control">
           <label class="checkbox">
             <input (change)="onChangeUseNumbers()" type="checkbox" />
-            Use Numbers
+            Usa i numeri
           </label>
         </div>
       </div>
@@ -31,13 +40,13 @@
         <div class="control">
           <label class="checkbox">
             <input (change)="onChangeUseSymbols()" type="checkbox" />
-            Use Symbols
+            Usa i simboli
           </label>
         </div>
       </div>
 
       <button [disabled]="
-          !(length && (includeLetters || includeSymbols || includeNumbers))
+          !(length && (includeLetters || includeSymbols || includeNumbers || includeLettersM))
         " (click)="onButtonClick()" class="button is-link is-fullwidth">
         Generate!
       </button>

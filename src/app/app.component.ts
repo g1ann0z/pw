@@ -15,6 +15,7 @@ export class AppComponent {
   includeSymbols = false;
   includeNumbers = false;
   includeLetters = false;
+  includeLettersM = false;
   
   password = '';
 
@@ -39,14 +40,23 @@ export class AppComponent {
     this.includeLetters = !this.includeLetters;
   }
 
+  onChangeUseLettersM(){
+    this.includeLettersM = !this.includeLettersM;
+  }
+
   onButtonClick(){
     const numbers = '1234567890';
     const letters = 'abcdefghijklmnopqrstuwyz';
-    const symbols = '!@#$%&*()';
+    const lettersM = 'ABCDEFGHIJKLMNOPQRSTUVWYZ';
+    const symbols = '!@#_-§[]$%&*()';
 
     let validChars = '';
     if(this.includeLetters) {
       validChars += letters;
+    }
+
+    if(this.includeLettersM) {
+      validChars += lettersM;
     }
 
     if(this.includeNumbers){
