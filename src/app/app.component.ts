@@ -10,12 +10,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   length = 0;
   includeSymbols = false;
   includeNumbers = false;
   includeLetters = false;
+  
   password = '';
-  lenght ='';
 
   onChangeLength(value: string){
     const parsedValue = parseInt(value);
