@@ -48,11 +48,11 @@
       <button [disabled]="
           !(length && (includeLetters || includeSymbols || includeNumbers || includeLettersM))
         " (click)="onButtonClick()" class="button is-link is-fullwidth">
-        Generate!
+        Genera la password
       </button>
 
       <div class="box" *ngIf="password">
-        <label>Your Password</label>
+        <label>Ecco la tua password</label>
         <input class="input" [value]="password" />
       </div>
     </div>
